@@ -22,6 +22,10 @@ h2:hover{
   box-sizing: border-box;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -229,7 +233,7 @@ h2 {
 #section3,
 #section3b,
 #section4,
-#section5 {
+#section5 { 
   margin: 0;
   height: 100%;
   display: -webkit-box;
@@ -253,7 +257,7 @@ h2 {
 
 /* ----DEBUT SECTION 2---- */
 #section2 {
-  background: #bdd4e7;
+  background: #bdd4e7b3;
   height: 100%;
 }
 
@@ -351,7 +355,7 @@ div.titre_comp:nth-child(3) {
 
 /* ----DEBUT SECTION 3---- */
 #section3 {
-  background: #aab9cf;
+  background: #aab9cf99;
 }
 
 #parcours_date {
@@ -377,7 +381,7 @@ div.titre_comp:nth-child(3) {
 
 /* ----DEBUT SECTION 3b---- */
 #section3b {
-  background: #8fa1bd;
+  background: #8fa1bd99;
   height: 100%;
 }
 
@@ -490,7 +494,7 @@ input[type=submit]:hover {
 
 /* ----DEBUT SECTION 4---- */
 #section4 {
-  background: #8693ab;
+  background: #8693ab99;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -510,7 +514,7 @@ input[type=submit]:hover {
 /* ----DEBUT SECTION 5---- */
 #section5 {
   height: 100%;
-  background: #637074;
+  background: #637074b3;
 }
 
 #contact2 {
@@ -665,13 +669,30 @@ label {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 520px) {
   #section2 {
     width: auto;
+  }
+  .titre_comp{
+    width: 90%;
   }
 
   .texte_comp {
     font-size: 13px;
+  }
+  #projets section{
+    padding: 0;
+  }
+  #tuto_guillaume div, #create_pro div, #zinfo974 div, #landing_page div{
+    margin-left: 0;
+    display: block;
+  }
+  #tuto_guillaume, #create_pro, #zinfo974, #landing_page{
+    width: 100%;
+  }
+  .img_mobile,.img_monitor{
+    width: 100%;
+    position: static;
   }
 }
 
