@@ -144,7 +144,7 @@ li:hover {
 h2 {
   text-align: center;
   text-transform: uppercase;
-  color: rgb(54, 133, 236);
+  color: #113487;
   text-shadow: 1px 1px 0px #575757;
   margin: 0;
   margin-bottom: 2vh;
@@ -297,14 +297,23 @@ q {
 }
 
 #texte {
-  background: -webkit-linear-gradient(rgb(4, 49, 145), rgb(90, 117, 235));
+  /* background: -webkit-linear-gradient(rgb(4, 49, 145), rgb(90, 117, 235));
   background-clip: border-box;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
+  color: #113487;
   margin: auto;
 }
 
-#compétence {
+#compétence1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+}
+#compétence2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,7 +324,12 @@ q {
 
 .titre_comp>i {
   font-size: 7vw;
-  color: #3684e9;
+  color: #113487;
+  margin-top: 5vh;
+  margin-bottom: 3vh;
+}
+.titre_comp>div>img {
+  width: 10vw;
   margin-top: 5vh;
   margin-bottom: 3vh;
 }
@@ -355,7 +369,7 @@ div.titre_comp:nth-child(3) {
 
 /* ----DEBUT SECTION 3---- */
 #section3 {
-  background: #aab9cf99;
+  background: #8fa1bd99;
 }
 
 #parcours_date {
@@ -365,10 +379,10 @@ div.titre_comp:nth-child(3) {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: -webkit-linear-gradient(rgb(4, 49, 145), rgb(90, 117, 235));
+  /* background: -webkit-linear-gradient(rgb(4, 49, 145), rgb(90, 117, 235));
   background-clip: border-box;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 #parcours {
@@ -381,7 +395,7 @@ div.titre_comp:nth-child(3) {
 
 /* ----DEBUT SECTION 3b---- */
 #section3b {
-  background: #8fa1bd99;
+  background: #cad7ec;
   height: 100%;
 }
 
@@ -494,7 +508,7 @@ input[type=submit]:hover {
 
 /* ----DEBUT SECTION 4---- */
 #section4 {
-  background: #8693ab99;
+  background: #8fa1bd99;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -514,7 +528,7 @@ input[type=submit]:hover {
 /* ----DEBUT SECTION 5---- */
 #section5 {
   height: 100%;
-  background: #637074b3;
+  background: #cad7ec;
 }
 
 #contact2 {
@@ -608,7 +622,17 @@ label {
     text-align: center;
   }
 
-  #compétence {
+  #compétence1 {
+    width: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  #compétence2 {
     width: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
