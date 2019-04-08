@@ -545,6 +545,9 @@ input[type=submit]:hover {
 #section5 {
   height: 100%;
   background: #cad7ec;
+}
+
+#texte_section5{
   text-align: center;
 }
 
