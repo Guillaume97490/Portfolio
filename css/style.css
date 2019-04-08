@@ -161,6 +161,16 @@ h2 {
   color: white;
 }
 
+.opquastAccueil{
+  position: absolute;
+  top: 18vh;
+  width: 100%;
+  text-align: center;
+}
+
+.opquastImg{
+  width: 77px;
+}
 #tg {
   margin: 0;
   text-align: center;
