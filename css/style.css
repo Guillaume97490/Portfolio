@@ -98,7 +98,7 @@ footer {
   font-weight: bold;
 }
 
-ul {
+#menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,7 +109,7 @@ ul {
   margin: 0;
 }
 
-li {
+#menu li {
   padding: 10px;
   list-style-type: none;
   text-align: center;
@@ -123,15 +123,15 @@ li {
   font-family: 'Comfortaa', cursive;
 }
 
-li>i {
+#menu li>i {
   padding-right: 0.5vmin;
 }
 
-ul>a {
+#menu ul>a {
   text-decoration: none;
 }
 
-li:hover {
+#menu li:hover {
   background-color: #348bed99;
   color: #fff;
 }
@@ -160,23 +160,41 @@ h2 {
   font-size: 10vmin;
   color: white;
 }
-
-.opquastAccueil{
-  position: absolute;
-  top: 18vh;
-  width: 100%;
+#nom_prenom{
+  display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+height: 100vh;
+align-items: center;
+}
+#certifié{
+  font-size: 2vmin;
+  /* float: left; */
+  /* width: 100%; */
+  /* transform: translateY(15vh); */
   text-align: center;
+  text-transform: full-width;
+  box-shadow: inset 0px 0px 75px #5a5a5a;
+  width: 100%;
+  transform: translateY(9vh);
+}
+
+#oquastAccueil{
+  /* float: left; */
+  /* padding-top: 18vh; */
+  /* width: 100%; */
+  /* text-align: center; */
 }
 
 .opquastImg{
-  width: 77px;
+  width: 10vmin;
 }
 #tg {
   margin: 0;
   text-align: center;
   font-family: 'Comfortaa', cursive;
-  padding-top: 40vh;
-  padding-bottom: 10vh;
+  /* padding-top: 40vh; */
+  /* padding-bottom: 10vh; */
 }
 
 #apprenant {
@@ -187,12 +205,15 @@ h2 {
 }
 
 #v_container {
-  text-align: center;
+  /* text-align: center; */
   -webkit-animation: rebond 1s infinite;
   animation: rebond 1s infinite;
   font-size: 8vmin;
 }
-
+#v_container p{
+  margin: 0;
+  transform: translateY(7vh);
+}
 #v_container>p>a {
   text-decoration: none;
   color: white;
@@ -223,8 +244,8 @@ h2 {
   }
 
   50% {
-    -webkit-transform: translatey(40%);
-    transform: translatey(40%);
+    -webkit-transform: translatey(20%);
+    transform: translatey(20%);
   }
 
   100% {
@@ -381,22 +402,19 @@ div.titre_comp:nth-child(3) {
 #section3 {
   background: #8fa1bd99;
 }
-
-#parcours_date {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.texteDiplome{
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  /* background: -webkit-linear-gradient(rgb(4, 49, 145), rgb(90, 117, 235));
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
-
-#parcours {
-  margin-left: 3%;
+.parcoursEtDiplome{
+  width: 66vw;
+}
+.parcoursEtDiplome ul{
+  width: 61vw;
+  padding-left: 12vw;
+}
+.date{
+  margin-right: 10%;
 }
 
 /* ----FIN SECTION 3---- */
@@ -499,7 +517,7 @@ div.titre_comp:nth-child(3) {
 }
 
 .google{
-  width: 500px;
+  
   margin-top: 9px;
   margin-bottom: -10px;
 }
