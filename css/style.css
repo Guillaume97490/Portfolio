@@ -451,7 +451,8 @@ div.titre_comp:nth-child(3) {
 #create_pro,
 #zinfo974,
 #landing_page,
-#chatJs {
+#chatJs,
+#To-do-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -468,7 +469,8 @@ div.titre_comp:nth-child(3) {
 #create_pro p,
 #zinfo974 p,
 #landing_page p,
-#chatJs p {
+#chatJs p,
+#To-do-list p {
   text-align: center;
 }
 
@@ -476,7 +478,8 @@ div.titre_comp:nth-child(3) {
 #create_pro div,
 #chatJs div,
 #zinfo974 div,
-#landing_page div {
+#landing_page div,
+#To-do-list div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -500,20 +503,26 @@ div.titre_comp:nth-child(3) {
 }
 
 #tuto_guillaume a,
-#chatJs a {
+#chatJs a,
+#To-do-list a {
   text-decoration: none;
   margin-bottom: 4vh;
 }
 
 #tuto_guillaume input,
-#chatJs input {
+#chatJs input,
+#To-do-list input {
   width: 100%;
   padding: 0 50;
 }
-.textChatJS{
+.textChatJS,
+.textToDoList{
   margin-top: 102px;
 }
-#chatJs > div{
+
+
+#chatJs > div,
+#To-do-list > div{
   margin: 0;
 }
 
