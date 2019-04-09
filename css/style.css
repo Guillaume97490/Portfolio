@@ -450,7 +450,8 @@ div.titre_comp:nth-child(3) {
 #tuto_guillaume,
 #create_pro,
 #zinfo974,
-#landing_page {
+#landing_page,
+#chatJs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -466,12 +467,14 @@ div.titre_comp:nth-child(3) {
 #tuto_guillaume p,
 #create_pro p,
 #zinfo974 p,
-#landing_page p {
+#landing_page p,
+#chatJs p {
   text-align: center;
 }
 
 #tuto_guillaume div,
 #create_pro div,
+#chatJs div,
 #zinfo974 div,
 #landing_page div {
   display: -webkit-box;
@@ -496,14 +499,22 @@ div.titre_comp:nth-child(3) {
   right: 82px;
 }
 
-#tuto_guillaume a {
+#tuto_guillaume a,
+#chatJs a {
   text-decoration: none;
   margin-bottom: 4vh;
 }
 
-#tuto_guillaume input {
+#tuto_guillaume input,
+#chatJs input {
   width: 100%;
   padding: 0 50;
+}
+.textChatJS{
+  margin-top: 102px;
+}
+#chatJs > div{
+  margin: 0;
 }
 
 #github{
@@ -740,6 +751,7 @@ label {
   .img_mobile {
     width: 100px;
   }
+  
 }
 
 @media screen and (max-width: 520px) {
@@ -767,6 +779,7 @@ label {
     width: 100%;
     position: static;
   }
+  
 }
 
 /*----FIN MEDIAS QUERIES----*/
