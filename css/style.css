@@ -22,7 +22,7 @@ h2:hover{
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -160,23 +160,36 @@ h2 {
   font-size: 10vmin;
   color: white;
 }
-#nom_prenom{
+
+#nom_prenom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-height: 100vh;
-align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-#certifié{
+
+#certifié {
   font-size: 2vmin;
   /* float: left; */
   /* width: 100%; */
   /* transform: translateY(15vh); */
   text-align: center;
   text-transform: full-width;
-  box-shadow: inset 0px 0px 75px #5a5a5a;
+  -webkit-box-shadow: inset 0px 0px 75px #5a5a5a;
+          box-shadow: inset 0px 0px 75px #5a5a5a;
   width: 100%;
-  transform: translateY(9vh);
+  -webkit-transform: translateY(9vh);
+          transform: translateY(9vh);
 }
 
 /* #oquastAccueil{
@@ -186,9 +199,10 @@ align-items: center;
   text-align: center;
 } */
 
-.opquastImg{
+.opquastImg {
   width: 10vmin;
 }
+
 #tg {
   margin: 0;
   text-align: center;
@@ -210,10 +224,13 @@ align-items: center;
   animation: rebond 1s infinite;
   font-size: 8vmin;
 }
-#v_container p{
+
+#v_container p {
   margin: 0;
-  transform: translateY(7vh);
+  -webkit-transform: translateY(7vh);
+          transform: translateY(7vh);
 }
+
 #v_container>p>a {
   text-decoration: none;
   color: white;
@@ -264,7 +281,7 @@ align-items: center;
 #section3,
 #section3b,
 #section4,
-#section5 { 
+#section5 {
   margin: 0;
   height: 100%;
   display: -webkit-box;
@@ -344,6 +361,7 @@ q {
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
 }
+
 #compétence2 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -359,6 +377,7 @@ q {
   margin-top: 5vh;
   margin-bottom: 3vh;
 }
+
 .titre_comp>div>img {
   width: 10vw;
   margin-top: 5vh;
@@ -402,18 +421,26 @@ div.titre_comp:nth-child(3) {
 #section3 {
   background: #8fa1bd99;
 }
-.texteDiplome{
+
+.texteDiplome {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.parcoursEtDiplome{
+
+.parcoursEtDiplome {
   width: 66vw;
 }
-.parcoursEtDiplome ul{
+
+.parcoursEtDiplome ul {
   width: 61vw;
   padding-left: 12vw;
 }
-.date{
+
+.date {
   margin-right: 10%;
 }
 
@@ -515,6 +542,7 @@ div.titre_comp:nth-child(3) {
   width: 100%;
   padding: 0 50;
 }
+
 /* .textChatJS,
 .textToDoList{
    margin-top: 102px; 
@@ -526,18 +554,18 @@ div.titre_comp:nth-child(3) {
   margin: 0;
 } */
 
-#github{
+#github {
   text-align: center;
   margin-bottom: 50px;
 }
 
-.profilGithub{
-  margin : 0;
+.profilGithub {
+  margin: 0;
 
 }
 
-.google{
-  
+.google {
+
   margin-top: 9px;
   margin-bottom: -10px;
 }
@@ -595,7 +623,7 @@ input[type=submit]:hover {
   background: #cad7ec;
 }
 
-#texte_section5{
+#texte_section5 {
   text-align: center;
 }
 
@@ -702,6 +730,7 @@ label {
     -ms-flex-align: center;
     align-items: center;
   }
+
   #compétence2 {
     width: auto;
     -webkit-box-orient: vertical;
@@ -746,7 +775,9 @@ label {
   #tuto_guillaume,
   #create_pro,
   #zinfo974,
-  #landing_page {
+  #landing_page,
+  #To-do-list,
+  #chatJs {
     width: 300px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -761,35 +792,51 @@ label {
   .img_mobile {
     width: 100px;
   }
-  
+
 }
 
 @media screen and (max-width: 520px) {
   #section2 {
     width: auto;
   }
-  .titre_comp{
+
+  .titre_comp {
     width: 90%;
   }
 
   .texte_comp {
     font-size: 13px;
   }
-  #projets section{
+
+  #projets section {
     padding: 0;
   }
-  #tuto_guillaume div, #create_pro div, #zinfo974 div, #landing_page div{
+
+  #tuto_guillaume div,
+  #create_pro div,
+  #zinfo974 div,
+  #landing_page div,
+  #To-do-list div,
+  #chatJs div {
     margin-left: 0;
     display: block;
   }
-  #tuto_guillaume, #create_pro, #zinfo974, #landing_page{
+
+  #tuto_guillaume,
+  #create_pro,
+  #zinfo974,
+  #landing_page,
+  #To-do-list,
+  #chatJs {
     width: 100%;
   }
-  .img_mobile,.img_monitor{
+
+  .img_mobile,
+  .img_monitor {
     width: 100%;
     position: static;
   }
-  
+
 }
 
 /*----FIN MEDIAS QUERIES----*/
