@@ -179,12 +179,12 @@ align-items: center;
   transform: translateY(9vh);
 }
 
-#oquastAccueil{
-  /* float: left; */
-  /* padding-top: 18vh; */
-  /* width: 100%; */
-  /* text-align: center; */
-}
+/* #oquastAccueil{
+  float: left;
+  padding-top: 18vh;
+  width: 100%;
+  text-align: center;
+} */
 
 .opquastImg{
   width: 10vmin;
@@ -685,6 +685,7 @@ label {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    height: 100%;
   }
 
   #texte {
