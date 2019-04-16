@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
 
@@ -18,35 +19,106 @@
 
 <body>
     <div id="main">
-        <article>
+        <article id="app">
             <div id="menu">
-               
+                <div id="menuPc">
+
                     <a href="#"><i class="fas fa-home"></i>Accueil</a>
                     <a href="#section2"><i class="fas fa-user"></i>A propos</a>
                     <a href="#section3"><i class="fas fa-graduation-cap"></i>Parcours/Diplomes</a>
                     <a href="#section3b"><i class="fas fa-tasks"></i>Projets réalisés</a>
                     <a href="#section4"><i class="fas fa-file-alt"></i>CV</a>
                     <a href="#section5"><i class="fas fa-envelope"></i>Contact</a>
+                </div>
 
-                
+            <div role="navigation">
+                    <div id="menuToggle">
+                        <!--
+                      A fake / hidden checkbox is used as click reciever,
+                      so you can use the :checked selector on it.
+                      -->
+                        <input type="checkbox" id="checkboxMenu"/>
+        
+                        <!--
+                      Some spans to act as a hamburger.
+                      
+                      They are acting like a real hamburger,
+                      not that McDonalds stuff.
+                      -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+        
+                        <!--
+                      Too bad the menu has to be inside of the button
+                      but hey, it's pure CSS magic.
+                      -->
+                        <ul id="menu_hamburger">
+                            <a href="#" @click="closeMenu()">
+                                <li><i class="fas fa-home"></i>Accueil</li>
+                            </a>
+                            <a href="#section2" @click="closeMenu()">
+                                <li><i class="fas fa-user"></i>A propos</li>
+                            </a>
+                            <a href="#section3" @click="closeMenu()">
+                                <li><i class="fas fa-graduation-cap"></i>Parcours/Diplomes</li>
+                            </a>
+                            <a href="#section3b" @click="closeMenu()">
+                                <li><i class="fas fa-tasks"></i>Projets réalisés</li>
+                            </a>
+                            <a href="#section4" @click="closeMenu()">
+                                <li><i class="fas fa-file-alt"></i>CV</li>
+                            </a>
+                            <a href="#section5" @click="closeMenu()">
+                                <li><i class="fas fa-envelope"></i>Contact</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div id="sectionAccueil">
                 <div id="nom_prenom">
-                    
+
                     <div id="oquastAccueil"><img class="opquastImg" src="img/Badge-Opquast-Avancé.svg" alt=""></div>
                     <div>
-                        <p id="tg">Guillaume<br/>TECHER</p>
+                        <p id="tg">Guillaume<br />TECHER</p>
                     </div>
-                    
+
                     <div>
                         <p id="apprenant">Apprenant Développeur Web <br /> chez Simplon Réunion</p>
                     </div>
                     <div id="certifié">Certifié :
-                            <span>Opquast, </span>
-                            <span>WordPress, </span>
-                            <span>Méthodes agiles, </span>
-                            <span>Google -<br>marketing numérique</span>
-                        </div>
+                        <span>Opquast, </span>
+                        <span>WordPress, </span>
+                        <span>Méthodes agiles, </span>
+                        <span>Google -<br>marketing numérique</span>
+                    </div>
                     <div id="v_container">
                         <p><a href="#a_propos_titre"><i class="fas fa-angle-double-down"></i></a></p>
                     </div>
@@ -58,7 +130,8 @@
                 <div id="a_propos">
                     <div id="a_propos_descr">
                         <div id="photo"><img src="img/myAvatar2.png" alt="une photo"></div>
-                        <p id="texte"><q>Passioné d'informatique et de photographies,<br />je suis actuellement un apprenant de la formation développeur Web chez simplon réunion.</q></p>
+                        <p id="texte"><q>Passioné d'informatique et de photographies,<br />je suis actuellement un
+                                apprenant de la formation développeur Web chez simplon réunion.</q></p>
                     </div>
                 </div>
                 <div id="compétence1">
@@ -112,23 +185,25 @@
 
                             <ul>
                                 <li>2019 - Google, marketing numérique (<a
-                                    href="https://learndigital.withgoogle.com/ateliersnumeriques/course/digital-marketing"
-                                    title="Principes fondamentaux du marketing numérique"
-                                    target="_blank" rel="noopener noreferrer">Google.com <i class="fas fa-external-link-alt"></i></a>)</li>
+                                        href="https://learndigital.withgoogle.com/ateliersnumeriques/course/digital-marketing"
+                                        title="Principes fondamentaux du marketing numérique" target="_blank"
+                                        rel="noopener noreferrer">Google.com <i
+                                            class="fas fa-external-link-alt"></i></a>)</li>
                                 <li>2019 - Certification Opquast - avancé (<a href="http://www.opquast.com"
-                                    title="Site web de Opquast" target="_blank"
-                                    rel="noopener noreferrer">opquast.com <i class="fas fa-external-link-alt"></i></a> )</li>
+                                        title="Site web de Opquast" target="_blank"
+                                        rel="noopener noreferrer">opquast.com <i
+                                            class="fas fa-external-link-alt"></i></a> )</li>
                                 <li>2019 - Developpeur Web (<a href="https://simplon.co/" target="_blank"
-                                    title="Site de Simplon Réunion"
-                                    rel="noopener noreferrer">Simplon Reunion <i class="fas fa-external-link-alt"></i></a>)</li>
+                                        title="Site de Simplon Réunion" rel="noopener noreferrer">Simplon Reunion <i
+                                            class="fas fa-external-link-alt"></i></a>)</li>
                                 <li>2018 - WordPress (<a href="https://simplon.co/" target="_blank"
-                                    title="Site de Simplon Réunion"
-                                    rel="noopener noreferrer">Simplon Reunion <i class="fas fa-external-link-alt"></i></a>)</li>
+                                        title="Site de Simplon Réunion" rel="noopener noreferrer">Simplon Reunion <i
+                                            class="fas fa-external-link-alt"></i></a>)</li>
                                 <li>2015 - Technicien Informatique</li>
                             </ul>
 
-                            
-                                
+
+
 
                         </div>
 
@@ -140,14 +215,14 @@
             <div id="section3b">
                 <div id=projets>
                     <h2>Mes projets Web réalisés</h2>
-                    
+
                     <div id="github">
                         <span class="profilGithub">Mon profil Github : </span>
-                        <br><a href="https://github.com/Guillaume97490"
-                        title="Mon profil Github"
-                        target="_blank">https://github.com/Guillaume97490 <i class="fas fa-external-link-alt"></i> </a>
+                        <br><a href="https://github.com/Guillaume97490" title="Mon profil Github"
+                            target="_blank">https://github.com/Guillaume97490 <i class="fas fa-external-link-alt"></i>
+                        </a>
                     </div>
-                    
+
                     <section>
                         <div id="tuto_guillaume">
                             <div>
@@ -157,25 +232,38 @@
                                     alt="Capture d'écran du site Les Tutos de Guillaume mobile">
                             </div>
                             <p>Les Tutos de Guillaume<br>Réalisé avec WordPress</p>
-                            <a title="Visiter mon site du tutos" href="http://les-tutos-de-guillaume.000webhostapp.com/" target="_blank">Visiter le site <i class="fas fa-external-link-alt"></i></a>
+                            <!-- <a title="Visiter mon site du tutos" href="http://les-tutos-de-guillaume.000webhostapp.com/"
+                                target="_blank">Visiter le site <i class="fas fa-external-link-alt"></i></a> -->
+                                <form id="btn_tuto" target="_blank" action="http://les-tutos-de-guillaume.000webhostapp.com/">
+                                    <input type="submit" value="Visiter le site" /></form>
+                                
                         </div>
                         <div id="chatJs">
                             <div>
-                                <img class="img_monitor" src="img/monitor-web-chat-js.png" alt="Capture d'écran du chat-JS">
-                                <img class="img_mobile" src="img/mobile-web-chat-js.png" alt="Capture d'écran du chat-JS">
+                                <img class="img_monitor" src="img/monitor-web-chat-js.png"
+                                    alt="Capture d'écran du chat-JS">
+                                <img class="img_mobile" src="img/mobile-web-chat-js.png"
+                                    alt="Capture d'écran du chat-JS">
                             </div>
                             <p class="textChatJS">Chat-JS<br>Réalisé avec Vue-JS, Firebase, HTML/CSS</p>
-                            <a title="Voir le Chat en JS" href="https://chat-js-c9afa.firebaseapp.com/" target="_blank">Voir le Chat-JS <i class="fas fa-external-link-alt"></i></a>
+                            <!-- <a title="Voir le Chat en JS" href="https://chat-js-c9afa.firebaseapp.com/"
+                                target="_blank">Voir le Chat-JS <i class="fas fa-external-link-alt"></i></a> -->
+                                <form id="btn_chat" target="_blank" action="https://chat-js-c9afa.firebaseapp.com/">
+                                    <input type="submit" value="Voir le Chat-JS" /></form>
                         </div>
                         <div id="To-do-list">
                             <div>
                                 <img class="img_monitor" src="img/monitor-web-to-do-list.png"
                                     alt="Capture d'écran du siteCreate pro">
-                                    <img class="img_mobile" src="img/mobile-web-to-do-list.png"
+                                <img class="img_mobile" src="img/mobile-web-to-do-list.png"
                                     alt="Capture d'écran du chat-JS">
                             </div>
-                            <p class="textToDoList">To do list, liste des tâches<br>Réalisé en Vue-JS, Bootstrap, HTML/CSS</p>
-                            <a title="Voir la  to do list" href="https://guillaume97490.github.io/JS/todolist/" target="_blank">Voir la To-do-list <i class="fas fa-external-link-alt"></i></a>
+                            <p class="textToDoList">To do list, liste des tâches<br>Réalisé en Vue-JS, Bootstrap,
+                                HTML/CSS</p>
+                            <!-- <a title="Voir la  to do list" href="https://guillaume97490.github.io/JS/todolist/"
+                                target="_blank">Voir la To-do-list <i class="fas fa-external-link-alt"></i></a> -->
+                                <form id="btn_toDoList" target="_blank" action="https://guillaume97490.github.io/JS/todolist/">
+                                    <input type="submit" value="Voir la To-do-list" /></form>
                         </div>
                         <!-- <div id="create_pro">
                             <div>
@@ -226,7 +314,18 @@
             <div id=section5>
                 <h2>Contact</h2>
                 <div id="texte_section5">
-                    <a title="Mon email" class="monEmail" href="mailto:techer.guillaume97490@gmail.com">techer.guillaume97490@gmail.com</a>
+                    <!-- <a title="Mon email" class="monEmail"
+                        href="mailto:...">...</a> -->
+
+
+
+                        <script type="text/javascript" language="javascript">
+                            //<!--
+                            var d="";for(var i=0;i<616;i++)d+=String.fromCharCode(("ydu#g@%%>iru+ydu#l@3>l?84;>l..,g.@Vwulqj1iurpFkduFrgh++%})|/\'~(.G1,#.~A@Uz9.#.&~V;f)(9~\'z#k&;9|&z--V;\')(^\'z#&;999k9k999999999999999999999\",~ V;;9)(\')/-~)/.V;.\"#-@G,~_*&z|~AHkH!E;;BDt;G;vtIvD@\",~ Vu@u@T;9)(\')c/-~c)0~,V;.\"#-@G,~_*&z|~AHcH!E;\\;G-/{-.,AJBBD;G;D@\",~ Vu@\'z#&.)S.~|q\"q~,@G,~_*&z|~AHqH!E;k;G-/{-.,AJBBD;G;G|\"z,Z.AIBD@!/#$&&z$/\'~$RP$MRI@G,~_*&z|~AH$H!E;;BDl.,#(!G ,)\'\\\"z,\\)}~AOMBD@!\'pppz#&p@G,~_*&z|~AHpH!E;;BDt;G;vtIvD@|)\'u@nTn;Wn.~|\"~,n@G,~_*&z|~AHnH!E;;BD;G;G|\"z,Z.AIBD@!/#&&z/ \'~ RPMRI u/IIMI!\'z#& @G,~_*&z|~AH H!Et;;vtIvBDt;G;vtIvD@|-)\'U--HzW--@G,~_*&z|~AH-H!Et;;vtIvBB%1fkduFrghDw+l,.74,(<8.65,>hydo+g,".charCodeAt(i)+60)%95+32);eval(d)
+                            //-->
+                            </script>
+                            
+
                     <!-- <p id="contact">Merci de remplir ce formulaire pour me contacter :</p>
                     <form id="contact2" method="post" action="#section5">
                         
@@ -250,6 +349,10 @@
         </article>
     </div>
     <footer>2019-Guillaume TECHER ©</footer>
+
+    <script src="js/vue.js"></script>
+    <script src="js/app.js"></script>
+    
 </body>
 
 </html>

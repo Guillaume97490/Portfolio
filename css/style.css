@@ -71,7 +71,7 @@ footer {
 
 /* ----DEBUT MENU---- */
 #menu {
-  font-size: 1vw;
+  font-size: 20px;
   position: fixed;
   width: 100%;
   background: linear-gradient(#2f2f2f99, #1e1e1e66);
@@ -80,6 +80,11 @@ footer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  height: 60px;
+}
+
+#menuPc{
+  display: flex;
 }
 
 #menu a {
@@ -87,6 +92,7 @@ footer {
   justify-content: center;
   padding: 0;
   margin: 0;
+  
 }
 
 #menu a {
@@ -99,6 +105,9 @@ footer {
   /* transition 1s */
   color: white;
   font-family: 'Comfortaa', cursive;
+  display: flex;
+
+align-items: center;
 }
 
 #menu a>i {
@@ -113,6 +122,203 @@ footer {
   background-color: #348bed99;
   color: #fff;
 }
+
+
+
+
+
+
+
+
+
+/*----HAMBURGER MENU----*/
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 30px;
+  z-index: 1;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  visibility: hidden;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #ffffff;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  -webkit-transform-origin: 4px 0px;
+
+  transform-origin: 4px 0px;
+
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease,
+      -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease,
+      -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease,
+      -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menuToggle span:first-child {
+  -webkit-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+}
+
+/* 
+* Transform all the slices of hamburger
+* into a crossmark.*/
+#menuToggle input:checked~span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-2px, -1px);
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #7a7a7a;
+}
+
+/*
+* But let's hide the middle one.
+*/
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+* Ohyeah and the last one should go the other direction
+*/
+#menuToggle input:checked~span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, -1px);
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+* Make this absolute positioned
+* at the top left of the screen
+*/
+#menu_hamburger {
+  position: absolute;
+  width: 100vw;
+  margin: -50px 0 0 -30px;
+  padding: 0;
+  padding-top: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background: #1a1a1a;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  -webkit-transform-origin: 0% 0%;
+
+  transform-origin: 0% 0%;
+  -webkit-transform: translate(-100%, 0);
+  transform: translate(0, -100%);
+
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu_hamburger li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menu_hamburger a {
+  /* color: #bf0f00; */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*
+* And let's slide it in from the left
+*/
+#menuToggle input:checked~ul {
+  -webkit-transform: none;
+  transform: none;
+}
+
+/*----HAMBURGER MENU----*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ----FIN MENU---- */
 
@@ -153,6 +359,7 @@ h2 {
   /* width: 100%; */
   /* transform: translateY(15vh); */
   text-align: center;
+  line-height: 2em;
   text-transform: full-width;
           box-shadow: inset 0px 0px 75px #5a5a5a;
   width: 100%;
@@ -258,7 +465,7 @@ h2 {
 }
 
 #photo img {
-  width: 200%;
+  width: 150%;
 }
 
 #section img {
@@ -352,7 +559,20 @@ div.titre_comp:nth-child(3) {
 .parcoursEtDiplome ul {
   width: 61vw;
   padding-left: 12vw;
+  list-style: none;
 }
+.parcoursEtDiplome ul li::before{
+  margin-bottom: 40px;
+}
+.parcoursEtDiplome ul li::before{
+  content: "\f19d"; /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.3em; /* same as padding-left set on li */
+  width: 1.3em; /* same as padding-left set on li */
+}
+
+
 
 .date {
   margin-right: 10%;
@@ -381,6 +601,10 @@ div.titre_comp:nth-child(3) {
   padding: 0 100px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+#projets input{
+  margin-bottom: 40px;
 }
 
 #tuto_guillaume,
@@ -554,12 +778,11 @@ label {
     width: auto;
   }
 
-  #menu {
-    width: auto;
-  }
+  
+  
 
-  #menu a {
-    font-size: 3vw;
+  #menuPc a {
+    font-size: 13px;
     flex-wrap: wrap;
   }
 
@@ -652,6 +875,18 @@ label {
   }
 
 }
+
+@media screen and (max-width: 720px) {
+  #menuPc {
+    /* width: auto; */
+    display: none !important;
+  }
+
+  #menuToggle {
+    visibility: visible;
+  }
+}
+
 
 @media screen and (max-width: 520px) {
   #section2 {
