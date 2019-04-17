@@ -530,6 +530,7 @@ q {
   font-size: 1.2vw;
   hyphens: auto;
   margin-top: 3vh;
+  line-height: 28px;
 }
 
 div.titre_comp:nth-child(3) {
@@ -553,12 +554,12 @@ div.titre_comp:nth-child(3) {
 }
 
 .parcoursEtDiplome {
-  width: 66vw;
+  /* width: 66vw; */
 }
 
 .parcoursEtDiplome ul {
-  width: 61vw;
-  padding-left: 12vw;
+  /* width: 93vw; */
+  padding-left: 4vw;
   list-style: none;
 }
 .parcoursEtDiplome ul li::before{
