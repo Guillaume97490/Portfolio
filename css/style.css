@@ -373,8 +373,27 @@ h2 {
   text-align: center;
 } */
 
+#logo{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+#logo div{
+  display: flex;
+}
+.agileImg {
+  width: 12vmin;
+}
 .opquastImg {
   width: 10vmin;
+  margin: 0 6vmin;
+}
+.googleImg {
+  width: 22vmin;
+  margin-right: 6vmin;
+}
+.wPImg {
+  width: 13vmin;
 }
 
 #tg {
@@ -491,6 +510,7 @@ q {
   -webkit-text-fill-color: transparent; */
   color: #113487;
   margin: auto;
+  line-height: 1.4em;
 }
 
 #compétence1 {
@@ -530,14 +550,16 @@ q {
   font-size: 1.2vw;
   hyphens: auto;
   margin-top: 3vh;
-  line-height: 28px;
+  line-height: 1.7em;
 }
 
 div.titre_comp:nth-child(3) {
   margin-bottom: unset;
 }
 
-
+.titleComp{
+    color: #113487    
+}
 /* ----FIN SECTION 2---- */
 
 
@@ -553,9 +575,9 @@ div.titre_comp:nth-child(3) {
           justify-content: center;
 }
 
-.parcoursEtDiplome {
-  /* width: 66vw; */
-}
+/* .parcoursEtDiplome {
+  width: 66vw;
+} */
 
 .parcoursEtDiplome ul {
   /* width: 93vw; */
@@ -601,7 +623,7 @@ div.titre_comp:nth-child(3) {
   width: auto;
   padding: 0 100px;
   justify-content: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 #projets input{
@@ -617,6 +639,8 @@ div.titre_comp:nth-child(3) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  
 }
 
 #tuto_guillaume p,
@@ -626,6 +650,7 @@ div.titre_comp:nth-child(3) {
 #chatJs p,
 #To-do-list p {
   text-align: center;
+  height: 100%;
 }
 
 #tuto_guillaume div,
@@ -637,17 +662,46 @@ div.titre_comp:nth-child(3) {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 100px;
+  position: relative;
+
+  /* margin-left: 100px; */
 }
 
+.btnToogleImgMobile, .btnToogleImgPc{
+  border-radius: 0px 0 0 100%;
+  height: 80px;
+  width: 80px;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #cf3939;
+  z-index: 1;
+  text-align: end;
+  padding-left: 20px;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 20px;
+  cursor: pointer;
+  }
+  .btnToogleImgMobile:hover, .btnToogleImgPc:hover{
+    background: #9c2222
+  }
+
+
+
+
+
 .img_monitor {
-  width: 600px;
+  width: 20vw;
+  /* width: 600px; */
+  
 }
 
 .img_mobile {
   width: 200px;
   position: relative;
-  right: 82px;
+  /* right: 82px; */
 }
 
 #tuto_guillaume a,
@@ -661,7 +715,7 @@ div.titre_comp:nth-child(3) {
 #chatJs input,
 #To-do-list input {
   width: 100%;
-  padding: 0 50px;
+  padding: 0 25px;
 }
 
 /* .textChatJS,
@@ -690,6 +744,30 @@ div.titre_comp:nth-child(3) {
   margin-top: 9px;
   margin-bottom: -10px;
 }
+
+
+
+
+
+
+
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+    {
+    opacity: 0;
+}
+
+
+
+
 
 /* ----FIN SECTION 3b---- */
 
@@ -787,7 +865,7 @@ label {
     flex-wrap: wrap;
   }
 
-  .opquastImg{
+  #logo{
     margin-top: 50px;
   }
 
@@ -832,6 +910,7 @@ label {
     align-items: center;
   }
 
+  
   .titre_comp {
     width: 60vw;
     font-size: 25px;
@@ -850,7 +929,7 @@ label {
     width: auto;
     height: 100%;
   }
-
+  
   #projets section {
     width: auto;
     flex-direction: column;

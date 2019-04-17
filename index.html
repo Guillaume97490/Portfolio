@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
 
@@ -104,8 +104,14 @@
 
             <div id="sectionAccueil">
                 <div id="nom_prenom">
+                    <div id="logo">
+                        <div id="agileAccueil"><img class="agileImg" src="img/agile2.png" alt=""></div>
+                        <div id="oquastAccueil"><img class="opquastImg" src="img/Badge-Opquast-Avancé.svg" alt=""></div>
+                        <div id="googleAccueil"><img class="googleImg" src="img/google.png" alt=""></div>
+                        <div id="wPAccueil"><img class="wPImg" src="img/WordPress.png" alt=""></div>
+                    </div>
 
-                    <div id="oquastAccueil"><img class="opquastImg" src="img/Badge-Opquast-Avancé.svg" alt=""></div>
+                    
                     <div>
                         <p id="tg">Guillaume<br />TECHER</p>
                     </div>
@@ -113,12 +119,12 @@
                     <div>
                         <p id="apprenant">Apprenant Développeur Web <br /> chez Simplon Réunion</p>
                     </div>
-                    <div id="certifié">Certifié :
+                    <!-- <div id="certifié">Certifié :
                         <span>Opquast, </span>
                         <span>WordPress, </span>
                         <span>Méthodes agiles, </span>
                         <span>Google -<br>marketing numérique</span>
-                    </div>
+                    </div> -->
                     <div id="v_container">
                         <p><a href="#a_propos_titre"><i class="fas fa-angle-double-down"></i></a></p>
                     </div>
@@ -135,7 +141,7 @@
                     </div>
                 </div>
                 <div id="compétence1">
-                    <div class="titre_comp"><i class="fab fa-wordpress"></i>Créations de site <br />avec WordPress
+                    <div class="titre_comp"><i class="fab fa-wordpress"></i><span class="titleComp">Créations de site <br />avec WordPress</span>
                         <div class="texte_comp">Installations, configurations, Sauvegardes, migrations, WooCommerce, thème enfants,
                             SEO, FTP.</div>
                         <!-- <div class="texte_comp">Installations et configurations de WordPress pour concevoir des sites
@@ -145,7 +151,7 @@
                             transfert de fichiers en FTP.</div> -->
 
                     </div>
-                    <div class="titre_comp"><i class="fas fa-tools"></i>Maintenances <br />informatiques
+                    <div class="titre_comp"><i class="fas fa-tools"></i> <span class="titleComp">Maintenances <br />informatiques</span>
                         <div class="texte_comp">Installations, machines virtuelles, assemblages,
                             diagnostiques, optimisations, installations des pilotes, récupérations de données, sauvegardes,
                             serveur Web, proxy Pf-Sense, anglais technique.</div>
@@ -156,7 +162,7 @@
                             Ubuntu/Debian et proxy Pf-Sense. Connaissance des différends périphériques. Compréhension
                             de l’anglais technique. Connaissance des réseaux informatiques.</div> -->
                     </div>
-                    <div class="titre_comp"><i class="fas fa-camera"></i>Photographie <br />numérique
+                    <div class="titre_comp"><i class="fas fa-camera"></i><span class="titleComp">Photographie <br />numérique</span>
                         <div class="texte_comp">triangle d’exposition, panoramas, apsc, plein-format, focale, 
                             flou d’arrière-plan, hyperfocal, règle des tiers, fichier Raw. Retouche simple et avancé, Traitement par lots, 
                             filtres ND et polarisant.</div>
@@ -172,7 +178,7 @@
 
 
                     <div class="titre_comp">
-                        <div><img src="img/Badge-Opquast-Avancé.svg" alt=""></div>Opquast (niveau avancé)
+                        <div><img src="img/Badge-Opquast-Avancé.svg" alt=""></div><span class="titleComp">Opquast (niveau avancé)</span>
                         <div class="texte_comp">
                             Gestion de projet web.
                             Prise en compte des exigences des utilisateurs.
@@ -241,40 +247,55 @@
                     <section>
                         <div id="tuto_guillaume">
                             <div>
-                                <img class="img_monitor" src="img/monitor-web-tuto-guillaume.png"
+                                
+                                <button v-if="this.changeImgTuto" @click="toogleImgTuto()" class="btnToogleImgPc">voir la verssion pc</button>
+                                <button v-else @click="toogleImgTuto()" class="btnToogleImgMobile">voir la verssion mobile</button>
+                                <img v-if="this.changeImgTuto" class="img_mobile" src="img/mobile-web-tuto-guillaume.png"
+                                alt="Capture d'écran du site Les Tutos de Guillaume mobile">
+                                <img v-else class="img_monitor" src="img/monitor-web-tuto-guillaume.png"
                                     alt="Capture d'écran du site Les Tutos de Guillaume">
-                                <img class="img_mobile" src="img/mobile-web-tuto-guillaume.png"
-                                    alt="Capture d'écran du site Les Tutos de Guillaume mobile">
+
+                                
                             </div>
-                            <p>Les Tutos de Guillaume<br>Réalisé avec WordPress</p>
-                            <!-- <a title="Visiter mon site du tutos" href="http://les-tutos-de-guillaume.000webhostapp.com/"
-                                target="_blank">Visiter le site <i class="fas fa-external-link-alt"></i></a> -->
+                            <p>Les Tutos de Guillaume :<br><span class="realise">Réalisé avec WordPress</span></p>
+                            
                                 <form id="btn_tuto" target="_blank" action="http://les-tutos-de-guillaume.000webhostapp.com/">
                                     <input type="submit" value="Visiter le site" /></form>
                                 
                         </div>
+
+
+
                         <div id="chatJs">
                             <div>
-                                <img class="img_monitor" src="img/monitor-web-chat-js.png"
+                                <button v-if="this.changeImgChat" @click="toogleImgChat()" class="btnToogleImgPc">voir la verssion pc</button>
+                                <button v-else @click="toogleImgChat()" class="btnToogleImgMobile">voir la verssion mobile</button>
+                                <img v-if="this.changeImgChat" class="img_mobile" src="img/mobile-web-chat-js.png"
                                     alt="Capture d'écran du chat-JS">
-                                <img class="img_mobile" src="img/mobile-web-chat-js.png"
+                                <img v-else class="img_monitor" src="img/monitor-web-chat-js.png"
                                     alt="Capture d'écran du chat-JS">
                             </div>
-                            <p class="textChatJS">Chat-JS<br>Réalisé avec Vue-JS, Firebase, HTML/CSS</p>
-                            <!-- <a title="Voir le Chat en JS" href="https://chat-js-c9afa.firebaseapp.com/"
-                                target="_blank">Voir le Chat-JS <i class="fas fa-external-link-alt"></i></a> -->
+                            <p class="textChatJS">Chat-JS :<br><span class="realise">Réalisé avec Vue-JS, Firebase, HTML/CSS</span></p>
+                            
                                 <form id="btn_chat" target="_blank" action="https://chat-js-c9afa.firebaseapp.com/">
                                     <input type="submit" value="Voir le Chat-JS" /></form>
                         </div>
+
+
+
+
+                        
                         <div id="To-do-list">
                             <div>
-                                <img class="img_monitor" src="img/monitor-web-to-do-list.png"
-                                    alt="Capture d'écran du siteCreate pro">
-                                <img class="img_mobile" src="img/mobile-web-to-do-list.png"
+                                <button v-if="this.changeImgToDoList" @click="toogleImgToDoList()" class="btnToogleImgPc">voir la verssion pc</button>
+                                <button v-else @click="toogleImgToDoList()" class="btnToogleImgMobile">voir la verssion mobile</button>
+                                <img v-if="this.changeImgToDoList" class="img_mobile" src="img/mobile-web-to-do-list.png"
                                     alt="Capture d'écran du chat-JS">
+                                <img v-else class="img_monitor" src="img/monitor-web-to-do-list.png"
+                                    alt="Capture d'écran du siteCreate pro">
                             </div>
-                            <p class="textToDoList">To do list, liste des tâches<br>Réalisé en Vue-JS, Bootstrap,
-                                HTML/CSS</p>
+                            <p class="textToDoList">To do list :<br><span class="realise">Réalisé en Vue-JS, Bootstrap,
+                                HTML/CSS</span></p>
                             <!-- <a title="Voir la  to do list" href="https://guillaume97490.github.io/JS/todolist/"
                                 target="_blank">Voir la To-do-list <i class="fas fa-external-link-alt"></i></a> -->
                                 <form id="btn_toDoList" target="_blank" action="https://guillaume97490.github.io/JS/todolist/">
@@ -301,12 +322,14 @@
                         </div> -->
                         <div id="landing_page">
                             <div>
-                                <img class="img_monitor" src="img/monitor-web-LandingPage.png"
-                                    alt="Capture d'écran du site Landing Page">
-                                <img class="img_mobile" src="img/mobile-web-LandingPage.png"
+                                <button v-if="this.changeImgLandingPage" @click="toogleImgLandingPage()" class="btnToogleImgPc">voir la verssion pc</button>
+                                <button v-else @click="toogleImgLandingPage()" class="btnToogleImgMobile">voir la verssion mobile</button>
+                                <img v-if="this.changeImgLandingPage" class="img_mobile" src="img/mobile-web-LandingPage.png"
                                     alt="Capture d'écran du site Landing Page mobile">
+                                <img v-else class="img_monitor" src="img/monitor-web-LandingPage.png"
+                                    alt="Capture d'écran du site Landing Page">
                             </div>
-                            <p>Landing Page<br>Réalisé en HTML/CSS, Bootstrap</p>
+                            <p>Landing Page :<br><span class="realise">Réalisé en HTML/CSS, Bootstrap</span></p>
                         </div>
 
                     </section>
@@ -335,9 +358,9 @@
 
 
                         <script type="text/javascript" language="javascript">
-                            //<!--
+                            
                             var d="";for(var i=0;i<616;i++)d+=String.fromCharCode(("ydu#g@%%>iru+ydu#l@3>l?84;>l..,g.@Vwulqj1iurpFkduFrgh++%})|/\'~(.G1,#.~A@Uz9.#.&~V;f)(9~\'z#k&;9|&z--V;\')(^\'z#&;999k9k999999999999999999999\",~ V;;9)(\')/-~)/.V;.\"#-@G,~_*&z|~AHkH!E;;BDt;G;vtIvD@\",~ Vu@u@T;9)(\')c/-~c)0~,V;.\"#-@G,~_*&z|~AHcH!E;\\;G-/{-.,AJBBD;G;D@\",~ Vu@\'z#&.)S.~|q\"q~,@G,~_*&z|~AHqH!E;k;G-/{-.,AJBBD;G;G|\"z,Z.AIBD@!/#$&&z$/\'~$RP$MRI@G,~_*&z|~AH$H!E;;BDl.,#(!G ,)\'\\\"z,\\)}~AOMBD@!\'pppz#&p@G,~_*&z|~AHpH!E;;BDt;G;vtIvD@|)\'u@nTn;Wn.~|\"~,n@G,~_*&z|~AHnH!E;;BD;G;G|\"z,Z.AIBD@!/#&&z/ \'~ RPMRI u/IIMI!\'z#& @G,~_*&z|~AH H!Et;;vtIvBDt;G;vtIvD@|-)\'U--HzW--@G,~_*&z|~AH-H!Et;;vtIvBB%1fkduFrghDw+l,.74,(<8.65,>hydo+g,".charCodeAt(i)+60)%95+32);eval(d)
-                            //-->
+                            
                             </script>
                             
 
