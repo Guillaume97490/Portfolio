@@ -379,7 +379,7 @@ h2 {
   margin-top: 15px;
 }
 #logo div{
-  display: flex;
+  /* display: flex; */
 }
 .agileImg {
   width: 12vmin;
