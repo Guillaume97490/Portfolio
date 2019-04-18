@@ -10,7 +10,7 @@ new Vue({
     methods: {
         closeMenu(){
             
-            document.getElementById("checkboxMenu").click(); // Click on the checkbox
+            document.getElementById("checkboxMenu").click(); 
         },
 
 

@@ -246,7 +246,9 @@
 
                     <section>
                         <div id="tuto_guillaume">
-                            <div>
+
+
+                            <div class="onPc">
                                 
                                 <button v-if="this.changeImgTuto" @click="toogleImgTuto()" class="btnToogleImgPc">voir la verssion pc</button>
                                 <button v-else @click="toogleImgTuto()" class="btnToogleImgMobile">voir la verssion mobile</button>
@@ -254,9 +256,18 @@
                                 alt="Capture d'écran du site Les Tutos de Guillaume mobile">
                                 <img v-else class="img_monitor" src="img/monitor-web-tuto-guillaume.png"
                                     alt="Capture d'écran du site Les Tutos de Guillaume">
-
-                                
                             </div>
+
+                            <div class="onMobile">
+                                <button v-if="!this.changeImgTuto" @click="toogleImgTuto()" class="btnToogleImgPc">voir la verssion pc</button>
+                                <button v-else @click="toogleImgTuto()" class="btnToogleImgMobile">voir la verssion mobile</button>
+                                <img v-if="!this.changeImgTuto" class="img_mobile" src="img/mobile-web-tuto-guillaume.png"
+                                alt="Capture d'écran du site Les Tutos de Guillaume mobile">
+                                <img v-else class="img_monitor" src="img/monitor-web-tuto-guillaume.png"
+                                    alt="Capture d'écran du site Les Tutos de Guillaume">
+                            </div>
+
+
                             <p>Les Tutos de Guillaume :<br><span class="realise">Réalisé avec WordPress</span></p>
                             
                                 <form id="btn_tuto" target="_blank" action="http://les-tutos-de-guillaume.000webhostapp.com/">
@@ -267,7 +278,7 @@
 
 
                         <div id="chatJs">
-                            <div>
+                            <div class="onPc">
                                 <button v-if="this.changeImgChat" @click="toogleImgChat()" class="btnToogleImgPc">voir la verssion pc</button>
                                 <button v-else @click="toogleImgChat()" class="btnToogleImgMobile">voir la verssion mobile</button>
                                 <img v-if="this.changeImgChat" class="img_mobile" src="img/mobile-web-chat-js.png"
@@ -275,6 +286,16 @@
                                 <img v-else class="img_monitor" src="img/monitor-web-chat-js.png"
                                     alt="Capture d'écran du chat-JS">
                             </div>
+                            <div class="onMobile">
+                                <button v-if="!this.changeImgChat" @click="toogleImgChat()" class="btnToogleImgPc">voir la verssion pc</button>
+                                <button v-else @click="toogleImgChat()" class="btnToogleImgMobile">voir la verssion mobile</button>
+                                <img v-if="!this.changeImgChat" class="img_mobile" src="img/mobile-web-chat-js.png"
+                                    alt="Capture d'écran du chat-JS">
+                                <img v-else class="img_monitor" src="img/monitor-web-chat-js.png"
+                                    alt="Capture d'écran du chat-JS">
+                            </div>
+
+
                             <p class="textChatJS">Chat-JS :<br><span class="realise">Réalisé avec Vue-JS, Firebase, HTML/CSS</span></p>
                             
                                 <form id="btn_chat" target="_blank" action="https://chat-js-c9afa.firebaseapp.com/">
@@ -286,7 +307,7 @@
 
                         
                         <div id="To-do-list">
-                            <div>
+                            <div class="onPc">
                                 <button v-if="this.changeImgToDoList" @click="toogleImgToDoList()" class="btnToogleImgPc">voir la verssion pc</button>
                                 <button v-else @click="toogleImgToDoList()" class="btnToogleImgMobile">voir la verssion mobile</button>
                                 <img v-if="this.changeImgToDoList" class="img_mobile" src="img/mobile-web-to-do-list.png"
@@ -294,6 +315,16 @@
                                 <img v-else class="img_monitor" src="img/monitor-web-to-do-list.png"
                                     alt="Capture d'écran du siteCreate pro">
                             </div>
+                            <div class="onMobile">
+                                <button v-if="!this.changeImgToDoList" @click="toogleImgToDoList()" class="btnToogleImgPc">voir la verssion pc</button>
+                                <button v-else @click="toogleImgToDoList()" class="btnToogleImgMobile">voir la verssion mobile</button>
+                                <img v-if="!this.changeImgToDoList" class="img_mobile" src="img/mobile-web-to-do-list.png"
+                                    alt="Capture d'écran du chat-JS">
+                                <img v-else class="img_monitor" src="img/monitor-web-to-do-list.png"
+                                    alt="Capture d'écran du siteCreate pro">
+                            </div>
+
+
                             <p class="textToDoList">To do list :<br><span class="realise">Réalisé en Vue-JS, Bootstrap,
                                 HTML/CSS</span></p>
                             <!-- <a title="Voir la  to do list" href="https://guillaume97490.github.io/JS/todolist/"
@@ -321,7 +352,7 @@
                             <p>Zinfo974<br>Réalisé en HTML/CSS</p>
                         </div> -->
                         <div id="landing_page">
-                            <div>
+                            <div class="onPc">
                                 <button v-if="this.changeImgLandingPage" @click="toogleImgLandingPage()" class="btnToogleImgPc">voir la verssion pc</button>
                                 <button v-else @click="toogleImgLandingPage()" class="btnToogleImgMobile">voir la verssion mobile</button>
                                 <img v-if="this.changeImgLandingPage" class="img_mobile" src="img/mobile-web-LandingPage.png"
@@ -329,6 +360,15 @@
                                 <img v-else class="img_monitor" src="img/monitor-web-LandingPage.png"
                                     alt="Capture d'écran du site Landing Page">
                             </div>
+                            <div class="onMobile">
+                                <button v-if="!this.changeImgLandingPage" @click="toogleImgLandingPage()" class="btnToogleImgPc">voir la verssion pc</button>
+                                <button v-else @click="toogleImgLandingPage()" class="btnToogleImgMobile">voir la verssion mobile</button>
+                                <img v-if="!this.changeImgLandingPage" class="img_mobile" src="img/mobile-web-LandingPage.png"
+                                    alt="Capture d'écran du site Landing Page mobile">
+                                <img v-else class="img_monitor" src="img/monitor-web-LandingPage.png"
+                                    alt="Capture d'écran du site Landing Page">
+                            </div>
+
                             <p>Landing Page :<br><span class="realise">Réalisé en HTML/CSS, Bootstrap</span></p>
                         </div>
 

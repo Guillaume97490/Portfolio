@@ -613,7 +613,9 @@ div.titre_comp:nth-child(3) {
 
 
 
-
+.onMobile{
+  display: none !important;
+}
 
 
 
@@ -1010,6 +1012,12 @@ label {
     position: static;
   }
 
+  .onPc{
+    display: none !important;
+  }
+  .onMobile{
+    display: unset !important;
+  }
 }
 
 /*----FIN MEDIAS QUERIES----*/
