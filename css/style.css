@@ -1,20 +1,3 @@
-/* <----CSS Tricks linear gradient on text---->
-
-  background: -webkit-linear-gradient(rgb(4, 49, 145), rgb(90, 117, 235));
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-*/
-
-
-/* <-----Animations des h2---->
-
-h2:hover{
-  transform: translateX(10px); /* Animation des h2
-*/
-
-
-
 
 /* <----DEBUT LAYOUT----> */
 * {
@@ -103,9 +86,7 @@ footer {
   list-style-type: none;
   text-align: center;
   transition-property: background-color;
-  /* transition background-color */
   transition-duration: 0.5s;
-  /* transition 1s */
   color: white;
   font-family: 'Comfortaa', cursive;
   display: flex;
@@ -125,15 +106,6 @@ align-items: center;
   background-color: #348bed99;
   color: #fff;
 }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -359,35 +331,13 @@ h2 {
           align-items: center;
 }
 
-#certifié {
-  font-size: 2vmin;
-  /* float: left; */
-  /* width: 100%; */
-  /* transform: translateY(15vh); */
-  text-align: center;
-  line-height: 2em;
-  text-transform: full-width;
-          box-shadow: inset 0px 0px 75px #5a5a5a;
-  width: 100%;
-          transform: translateY(9vh);
-}
-
-/* #oquastAccueil{
-  float: left;
-  padding-top: 18vh;
-  width: 100%;
-  text-align: center;
-} */
 
 #logo{
   display: flex;
   align-items: center;
-  /* margin-top: 15px; */
   margin-bottom: -2vh;
 }
-/* #logo div{
-  display: flex;
-} */
+
 .agileImg {
   width: 12vmin;
 }
@@ -407,13 +357,8 @@ h2 {
   margin: 0;
   text-align: center;
   font-family: 'Comfortaa', cursive;
-
   margin-top: 20vh;
   margin-bottom: 6vh;
-
-
-  /* padding-top: 40vh; */
-  /* padding-bottom: 10vh; */
 }
 
 #apprenant {
@@ -424,7 +369,6 @@ h2 {
 }
 
 #v_container {
-  /* text-align: center; */
   animation: rebond 1s infinite;
   font-size: 8vmin;
   margin-top: -13vh;
@@ -512,15 +456,10 @@ h2 {
 q {
   font-size: 50px;
   quotes: '«''»';
-  /*Active les guillemets normale...*/
   font-size: 3vmin;
 }
 
 #texte {
-  /* background: -webkit-linear-gradient(rgb(4, 49, 145), rgb(90, 117, 235));
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
   color: #113487;
   margin: auto;
   line-height: 1.4em;
@@ -588,12 +527,9 @@ div.titre_comp:nth-child(3) {
           justify-content: center;
 }
 
-/* .parcoursEtDiplome {
-  width: 66vw;
-} */
+
 
 .parcoursEtDiplome ul {
-  /* width: 93vw; */
   padding-left: 4vw;
   list-style: none;
 }
@@ -608,10 +544,209 @@ div.titre_comp:nth-child(3) {
   width: 1.3em; /* same as padding-left set on li */
 }
 
-
-
 .date {
   margin-right: 10%;
+}
+
+
+.parcoursTimeline{
+  max-width: 70%;
+}
+
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+
+  .timeline:before {
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      content: " ";
+      width: 3px;
+      background-color: #5388da;
+      left: 50%;
+      margin-left: -1.5px;
+  }
+
+  .timeline > li {
+      margin-bottom: 20px;
+      position: relative;
+  }
+
+      .timeline > li:before,
+      .timeline > li:after {
+          content: " ";
+          display: table;
+      }
+
+      .timeline > li:after {
+          clear: both;
+      }
+
+      .timeline > li:before,
+      .timeline > li:after {
+          content: " ";
+          display: table;
+      }
+
+      .timeline > li:after {
+          clear: both;
+      }
+
+      .timeline > li > .timeline-panel {
+          width: 46%;
+          float: left;
+          border: 1px solid #d4d4d4;
+          border-radius: 2px;
+          padding: 20px;
+          position: relative;
+          -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+          background: white;
+          border-radius: 15px;
+      }
+
+          .timeline > li > .timeline-panel:before {
+              position: absolute;
+              top: 26px;
+              right: -15px;
+              display: inline-block;
+              border-top: 15px solid transparent;
+              border-left: 15px solid #ccc;
+              border-right: 0 solid #ccc;
+              border-bottom: 15px solid transparent;
+              content: " ";
+          }
+
+          .timeline > li > .timeline-panel:after {
+              position: absolute;
+              top: 27px;
+              right: -14px;
+              display: inline-block;
+              border-top: 14px solid transparent;
+              border-left: 14px solid #fff;
+              border-right: 0 solid #fff;
+              border-bottom: 14px solid transparent;
+              content: " ";
+          }
+
+      .timeline > li > .timeline-badge {
+          color: #5388da;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          font-size: 30px;
+          text-align: center;
+          position: absolute;
+          top: 16px;
+          left: 50%;
+          margin-left: -25px;
+          background-color: #999999;
+          z-index: 100;
+          border-top-right-radius: 50%;
+          border-top-left-radius: 50%;
+          border-bottom-right-radius: 50%;
+          border-bottom-left-radius: 50%;
+      }
+      
+
+      .timeline > li.timeline-inverted > .timeline-panel {
+          float: right;
+      }
+
+          .timeline > li.timeline-inverted > .timeline-panel:before {
+              border-left-width: 0;
+              border-right-width: 15px;
+              left: -15px;
+              right: auto;
+          }
+
+          .timeline > li.timeline-inverted > .timeline-panel:after {
+              border-left-width: 0;
+              border-right-width: 14px;
+              left: -14px;
+              right: auto;
+          }
+
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+  /* background-color: #3f903f !important; */
+  background-color: #ffffff !important;
+}
+
+.timeline-badge.warning {
+  background-color: #b37621 !important;
+}
+
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+  background-color: #5bc0de !important;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: inherit;
+}
+
+.text-muted{
+  font-size: 1.2rem;
+}
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+}
+.timeline-body > p{
+  font-size: initial;
+}
+
+
+  .timeline-body > p + p {
+      margin-top: 5px;
+  }
+
+@media (max-width: 767px) {
+  ul.timeline:before {
+      left: 40px;
+  }
+
+  ul.timeline > li > .timeline-panel {
+      width: calc(100% - 90px);
+      width: -moz-calc(100% - 90px);
+      width: -webkit-calc(100% - 90px);
+  }
+
+  ul.timeline > li > .timeline-badge {
+      left: 15px;
+      margin-left: 0;
+      top: 16px;
+  }
+
+  ul.timeline > li > .timeline-panel {
+      float: right;
+  }
+
+      ul.timeline > li > .timeline-panel:before {
+          border-left-width: 0;
+          border-right-width: 15px;
+          left: -15px;
+          right: auto;
+      }
+
+      ul.timeline > li > .timeline-panel:after {
+          border-left-width: 0;
+          border-right-width: 14px;
+          left: -14px;
+          right: auto;
+      }
 }
 
 /* ----FIN SECTION 3---- */
@@ -634,12 +769,16 @@ div.titre_comp:nth-child(3) {
 
 #projets section {
   display: flex;
-  /* flex-direction: column; */
   width: auto;
-  padding: 0 100px;
+  padding: 0 75px;
   justify-content: center;
-  /* flex-wrap: wrap; */
 }
+
+#projets section .realise{
+  margin-top: 1em;
+  font-size: .7em;
+}
+
 
 #projets input{
   margin-bottom: 40px;
@@ -679,8 +818,6 @@ div.titre_comp:nth-child(3) {
   justify-content: center;
   align-items: center;
   position: relative;
-
-  /* margin-left: 100px; */
 }
 
 .btnToogleImgMobile, .btnToogleImgPc{
@@ -710,13 +847,6 @@ div.titre_comp:nth-child(3) {
     border: none;
     background: #9c2222;
   }
-  
-  
-  
-
-
-
-
 
 .img_monitor {
   width: 20vw;
@@ -727,7 +857,6 @@ div.titre_comp:nth-child(3) {
 .img_mobile {
   width: 200px;
   position: relative;
-  /* right: 82px; */
 }
 
 #tuto_guillaume a,
@@ -743,17 +872,6 @@ div.titre_comp:nth-child(3) {
   width: 100%;
   padding: 0 25px;
 }
-
-/* .textChatJS,
-.textToDoList{
-   margin-top: 102px; 
-} */
-
-
-/* #chatJs > div,
-#To-do-list > div{
-  margin: 0;
-} */
 
 #github {
   text-align: center;
@@ -772,22 +890,13 @@ div.titre_comp:nth-child(3) {
 }
 
 
-
-
-
-
-
-
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity .5s;
 }
 
 .fade-enter,
-.fade-leave-to
-
-/* .fade-leave-active below version 2.1.8 */
-    {
+.fade-leave-to{
     opacity: 0;
 }
 
@@ -812,14 +921,9 @@ input[type=submit] {
 
 input[type=submit]:hover {
   background-color: rgb(37, 37, 37);
-  /* Black */
   color: white;
   cursor: pointer;
 }
-
-
-
-
 
 
 /* ----DEBUT SECTION 4---- */
@@ -885,9 +989,6 @@ label {
   body {
     width: auto;
   }
-
-  
-  
 
   #menuPc a {
     font-size: 13px;
@@ -959,6 +1060,9 @@ label {
     height: 100%;
   }
   
+  .parcoursTimeline{
+    max-width: 100%;
+  }
   #projets section {
     width: auto;
     flex-direction: column;
@@ -1015,6 +1119,8 @@ label {
 
   #projets section {
     padding: 0;
+    width: 90%;
+    margin: auto;
   }
 
   #tuto_guillaume div,
