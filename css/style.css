@@ -697,9 +697,11 @@ div.titre_comp:nth-child(3) {
   font-weight: bold;
   padding-bottom: 20px;
   cursor: pointer;
+  font-size: 12px;
   outline: 0;
-  outline: none;
+  outline: none !important;
   -webkit-appearance: none;
+
   
   }
   .btnToogleImgMobile:hover, .btnToogleImgPc:hover{
