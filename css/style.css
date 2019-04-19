@@ -31,6 +31,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
   margin: 0;
+  line-height: 1 !important;
 }
 
 
@@ -665,6 +666,7 @@ div.titre_comp:nth-child(3) {
 #To-do-list p {
   text-align: center;
   height: 100%;
+  margin-top: 1em;
 }
 
 #tuto_guillaume div,
@@ -830,6 +832,9 @@ input[type=submit]:hover {
 #btn_cv {
   text-align: center;
 }
+#btn_cv input{
+  width: 18vmin;
+}
 
 /* ----FIN SECTION 4---- */
 
@@ -890,7 +895,7 @@ label {
   }
 
   #logo{
-    margin-top: 50px;
+    margin-top: -30px;
   }
 
   #tg {
@@ -993,6 +998,9 @@ label {
 
 
 @media screen and (max-width: 520px) {
+  #section2, #section3b, #section4, #section5{
+    font-size: initial;
+  }
   #section2 {
     width: auto;
   }
@@ -1028,11 +1036,22 @@ label {
     width: 100%;
   }
 
+  #tuto_guillaume input, #chatJs input, #To-do-list input {
+    width: 100%;
+    padding: 0 25px;
+    font-size: inherit;
+}
+
   .img_mobile,
   .img_monitor {
     width: 100%;
     position: static;
   }
+
+  #btn_cv input {
+    width: 36vmin;
+    font-size: initial;
+}
 
   .onPc{
     display: none !important;
