@@ -774,6 +774,12 @@ div.titre_comp:nth-child(3) {
   justify-content: center;
 }
 
+
+#projets section .titleSite{
+  margin-bottom: 20px;
+  font-weight: bold;
+  margin: 0;
+}
 #projets section .realise{
   margin-top: 1em;
   font-size: .7em;
@@ -937,7 +943,7 @@ input[type=submit]:hover {
   text-align: center;
 }
 #btn_cv input{
-  width: 18vmin;
+  width: 27vmin;
 }
 
 /* ----FIN SECTION 4---- */
@@ -1108,19 +1114,31 @@ label {
   #section2 {
     width: auto;
   }
+  q{
+    font-size: 4vmin;
+  }
 
   .titre_comp {
     width: 90%;
   }
+  .titre_comp>i{
+    font-size: 15vmin;
+  }
+  .titre_comp > div > img{
+    width: 18vw;
+  }
 
   .texte_comp {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   #projets section {
     padding: 0;
     width: 90%;
     margin: auto;
+  }
+  #projets section .realise{
+    font-size: 0.9em;
   }
 
   #tuto_guillaume div,
@@ -1146,6 +1164,7 @@ label {
     width: 100%;
     padding: 0 25px;
     font-size: inherit;
+    height: 60px;
 }
 
   .img_mobile,
@@ -1165,6 +1184,22 @@ label {
   .onMobile{
     display: unset !important;
   }
+  .parcoursTimeline{
+    padding-left: 0;
+  }
+  .timeline-title{
+    font-size: 1.3rem;
+  }
+  .btnToogleImgMobile, .btnToogleImgPc{
+    padding-left: 0;
+    line-height: 1.2;
+  }
+  #btn_cv input {
+    width: 60vmin;
+    font-size: initial;
+    height: 70px;
+
+}
 }
 
 /*----FIN MEDIAS QUERIES----*/
