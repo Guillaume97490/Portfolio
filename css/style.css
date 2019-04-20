@@ -29,12 +29,10 @@ body {
   margin: auto;
 }
 
-header,
 footer {
   height: 20vh;
 }
 
-header,
 footer,
 article {
   padding: 1em;
@@ -442,16 +440,16 @@ h2 {
 
 #photo img {
   width: 150%;
-}
 
-#section img {
-  height: 40vmin;
+
   border-style: solid;
   border-width: 10px 10px 50px 10px;
   border-color: white;
-  background: linear-gradient(rgb(194, 194, 194), rgb(98, 92, 78));
+  background: linear-gradient(rgb(204, 140, 140), rgb(220, 99, 52));
   border-radius: 5px;
 }
+
+
 
 q {
   font-size: 50px;
@@ -527,26 +525,6 @@ div.titre_comp:nth-child(3) {
           justify-content: center;
 }
 
-
-
-.parcoursEtDiplome ul {
-  padding-left: 4vw;
-  list-style: none;
-}
-.parcoursEtDiplome ul li::before{
-  margin-bottom: 40px;
-}
-.parcoursEtDiplome ul li::before{
-  content: "\f19d"; /* FontAwesome Unicode */
-  font-family: FontAwesome;
-  display: inline-block;
-  margin-left: -1.3em; /* same as padding-left set on li */
-  width: 1.3em; /* same as padding-left set on li */
-}
-
-.date {
-  margin-right: 10%;
-}
 
 
 .parcoursTimeline{
@@ -791,8 +769,6 @@ div.titre_comp:nth-child(3) {
 }
 
 #tuto_guillaume,
-#create_pro,
-#zinfo974,
 #landing_page,
 #chatJs,
 #To-do-list {
@@ -800,12 +776,11 @@ div.titre_comp:nth-child(3) {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  text-align: center;
   
 }
 
 #tuto_guillaume p,
-#create_pro p,
-#zinfo974 p,
 #landing_page p,
 #chatJs p,
 #To-do-list p {
@@ -815,15 +790,14 @@ div.titre_comp:nth-child(3) {
 }
 
 #tuto_guillaume div,
-#create_pro div,
 #chatJs div,
-#zinfo974 div,
 #landing_page div,
 #To-do-list div {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  text-align: center;
 }
 
 .btnToogleImgMobile, .btnToogleImgPc{
@@ -865,15 +839,10 @@ div.titre_comp:nth-child(3) {
   position: relative;
 }
 
-#tuto_guillaume a,
-#chatJs a,
-#To-do-list a {
-  
-  margin-bottom: 4vh;
-}
 
 #tuto_guillaume input,
 #chatJs input,
+#landing_page input,
 #To-do-list input {
   width: 100%;
   padding: 0 25px;
@@ -888,27 +857,6 @@ div.titre_comp:nth-child(3) {
   margin: 0;
 
 }
-
-.google {
-
-  margin-top: 9px;
-  margin-bottom: -10px;
-}
-
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity .5s;
-}
-
-.fade-enter,
-.fade-leave-to{
-    opacity: 0;
-}
-
-
-
-
 
 /* ----FIN SECTION 3b---- */
 
@@ -938,7 +886,6 @@ input[type=submit]:hover {
   align-items: center;
 }
 
-#txt_cv,
 #btn_cv {
   text-align: center;
 }
@@ -961,32 +908,6 @@ input[type=submit]:hover {
 #texte_section5 {
   text-align: center;
 }
-
-#contact2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.ligneform {
-  display: flex;
-}
-
-label {
-  width: 10vw;
-}
-
-#contact {
-  text-align: center;
-}
-
-#message,
-#email,
-#nom {
-  width: 76vmin;
-  font-size: 2vmin;
-}
-
 
 /* ----FIN SECTION 5---- */
 
@@ -1083,6 +1004,7 @@ label {
   #chatJs {
     width: 300px;
     flex-direction: column;
+    text-align: center;
   }
 
   .img_monitor {
@@ -1142,25 +1064,23 @@ label {
   }
 
   #tuto_guillaume div,
-  #create_pro div,
-  #zinfo974 div,
   #landing_page div,
   #To-do-list div,
   #chatJs div {
     margin-left: 0;
     display: block;
+    text-align: center;
   }
 
   #tuto_guillaume,
-  #create_pro,
-  #zinfo974,
   #landing_page,
   #To-do-list,
   #chatJs {
     width: 100%;
+    text-align: center;
   }
 
-  #tuto_guillaume input, #chatJs input, #To-do-list input {
+  #tuto_guillaume input, #chatJs input, #landing_page input, #To-do-list input {
     width: 100%;
     padding: 0 25px;
     font-size: inherit;

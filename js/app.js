@@ -15,17 +15,17 @@ new Vue({
 
 
         toogleImgTuto(){
-            this.changeImgTuto = !this.changeImgTuto
+            this.changeImgTuto = !this.changeImgTuto;
         },
 
         toogleImgChat(){
-            this.changeImgChat = !this.changeImgChat
+            this.changeImgChat = !this.changeImgChat;
         },
         toogleImgToDoList(){
-            this.changeImgToDoList = !this.changeImgToDoList
+            this.changeImgToDoList = !this.changeImgToDoList;
         },
         toogleImgLandingPage(){
-            this.changeImgLandingPage = !this.changeImgLandingPage
+            this.changeImgLandingPage = !this.changeImgLandingPage;
         },
 
     },
